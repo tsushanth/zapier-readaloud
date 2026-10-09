@@ -11,6 +11,6 @@ Written to Zapier's naming and description rules: the app name is the plain bran
 - **Action label and description:** Convert Text to Speech: Converts text to spoken audio and returns an audio file you can use in later steps.
 - **Auth help text:** Create an API key in your account at readaloudai.org, then paste it here.
 - **Website:** https://readaloudai.org
-- **Support contact:** support@readaloudai.org (PLACEHOLDER: owner to confirm)
+- **Support contact:** support@readaloudai.org
 - **Logo:** `logo.png` (512x512 PNG, transparent corners, original neutral design)
 - **Suggested starter Zap ideas:** read new RSS items aloud and save to Drive; turn form responses into audio replies; create an audio version of a new Notion page.

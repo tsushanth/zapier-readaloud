@@ -65,7 +65,7 @@ Publishing to Zapier (`zapier-platform login`, `register`, `push`, `promote`) is
 
 ## Support
 
-support@readaloudai.org (PLACEHOLDER: the owner must confirm this address before submission).
+support@readaloudai.org.
 
 ## License
 

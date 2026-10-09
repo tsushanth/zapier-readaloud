@@ -27,4 +27,4 @@ IMPORTANT: the free allowance is ONE shared pool per account across all of that 
 ## Notes
 
 - The Voice field is free text capable; the dropdown only suggests values.
-- Support contact in the listing: support@readaloudai.org (placeholder until the owner confirms).
+- Support contact in the listing: support@readaloudai.org.
