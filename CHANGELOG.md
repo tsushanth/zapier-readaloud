@@ -1,0 +1,9 @@
+# Changelog
+
+## 0.1.0
+
+- API key authentication with a `GET /v1/voices` connection test.
+- Action: Convert Text to Speech (text, voice, MP3/WAV/Opus, speed, file name), output stored with `z.stashFile`.
+- Hidden `voice_list` trigger for the Voice dropdown; `piper-default` is the default and first entry.
+- Error mapping to `ExpiredAuthError`, `ThrottledError` and `Error` with clear messages.
+- Offline (nock) tests and an opt-in live test.
