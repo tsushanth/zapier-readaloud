@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Only `piper-default` is offered for now: removed the hidden `voice_list` trigger; the Voice field is a single fixed choice.
+
 ## 0.1.0
 
 - API key authentication with a `GET /v1/voices` connection test.

@@ -133,8 +133,8 @@ module.exports = {
         type: 'string',
         required: false,
         default: DEFAULT_VOICE,
-        dynamic: 'voice_list.id.name',
-        helpText: `Pick a voice, or type or map any voice ID your account can use. Leave it as \`${DEFAULT_VOICE}\` for the standard voice.`,
+        choices: { [DEFAULT_VOICE]: `${DEFAULT_VOICE} (default)` },
+        helpText: `Currently only \`${DEFAULT_VOICE}\` is offered.`,
       },
       {
         key: 'format',

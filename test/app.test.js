@@ -56,33 +56,15 @@ describe('authentication', () => {
   });
 });
 
-describe('voice_list trigger', () => {
-  test('puts piper-default first and maps voices', async () => {
-    nock(API)
-      .get('/v1/voices')
-      .reply(200, {
-        voices: [
-          { voice_id: 'a', name: 'Alpha', language: 'en', gender: 'female' },
-          { voice_id: 'piper-default', name: 'Default' },
-        ],
-      });
-    const out = await appTester(App.triggers.voice_list.operation.perform, {
-      authData,
-    });
-    expect(out[0].id).toBe('piper-default');
-    expect(out).toHaveLength(2);
-    expect(out[1]).toEqual({ id: 'a', name: 'Alpha - en - female' });
-  });
-
-  test('is hidden and voice field is free-text capable', () => {
-    expect(App.triggers.voice_list.display.hidden).toBe(true);
+describe('voice field', () => {
+  test('offers only piper-default and there is no voice-listing trigger', () => {
+    expect(App.triggers).toBeUndefined();
     const f = App.creates.convert_text_to_speech.operation.inputFields.find(
       (x) => x.key === 'voice',
     );
     expect(f.default).toBe('piper-default');
-    expect(f.type).toBe('string');
-    expect(f.choices).toBeUndefined();
-    expect(f.dynamic).toBe('voice_list.id.name');
+    expect(Object.keys(f.choices)).toEqual(['piper-default']);
+    expect(f.dynamic).toBeUndefined();
   });
 });
 

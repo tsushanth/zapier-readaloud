@@ -2,7 +2,7 @@
 
 ## What the integration does
 
-One action, **Convert Text to Speech**, which sends text to ReadAloud and returns an audio file. There are no triggers visible to users (one hidden helper trigger fills the Voice dropdown).
+One action, **Convert Text to Speech**, which sends text to ReadAloud and returns an audio file. There are no triggers.
 
 ## Test account
 
@@ -14,7 +14,7 @@ IMPORTANT: the free allowance is ONE shared pool per account across all of that 
 
 1. Create a Zap with any trigger (for example Schedule by Zapier or Catch Hook).
 2. Add the action **ReadAloud: Convert Text to Speech**. Connect the account with the API key. The connection test calls `GET /v1/voices`.
-3. Set **Text** to a short sentence. Leave **Voice** as `piper-default`, or open the dropdown to pick another voice; you can also type or map a voice ID.
+3. Set **Text** to a short sentence. Leave **Voice** as `piper-default`, the only voice offered.
 4. Test the step. The output has an **Audio File** URL that downloads a playable MP3, plus file name, voice, format, characters and bytes.
 5. Optional: set **Audio Format** to WAV or Opus, **Speed** to 1.5, **File Name** to anything.
 
@@ -26,5 +26,4 @@ IMPORTANT: the free allowance is ONE shared pool per account across all of that 
 
 ## Notes
 
-- The Voice field is free text capable; the dropdown only suggests values.
 - Support contact in the listing: support@readaloudai.org.

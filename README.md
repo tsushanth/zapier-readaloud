@@ -11,14 +11,13 @@ Status: source for a Zapier Platform CLI integration. It is not yet published in
 | Field | Notes |
 | --- | --- |
 | Text | Required. Up to 5000 characters per request. |
-| Voice | Defaults to `piper-default`. Choose from the dropdown, or type or map any voice ID your account can use. |
+| Voice | `piper-default`, currently the only voice offered. |
 | Audio Format | MP3 (default), WAV or Opus (Ogg). |
 | Speed | 0.25 to 4, default 1. |
 | File Name | Optional name without extension; the extension is added from the format. |
 
 Output: `file` (a Zapier-hosted file other steps can attach or upload), `file_name`, `voice`, `format`, `characters`, `bytes`.
 
-A hidden `voice_list` trigger fills the Voice dropdown. It calls `GET /v1/voices` and always puts `piper-default` first.
 
 ## Authentication
 

@@ -24,14 +24,6 @@ const key = live
     expect(Array.isArray(res.voices)).toBe(true);
   });
 
-  test('voice list starts with piper-default', async () => {
-    const out = await appTester(App.triggers.voice_list.operation.perform, {
-      authData,
-    });
-    expect(out[0].id).toBe('piper-default');
-    expect(out.length).toBeGreaterThan(1);
-  });
-
   test('speech returns real audio bytes', async () => {
     // Call the API through the app's own request path, no stash.
     const real = await appTester(

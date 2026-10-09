@@ -5,7 +5,6 @@ const platformVersion = require('zapier-platform-core').version;
 
 const authentication = require('./src/authentication');
 const { handleErrors } = require('./src/errors');
-const voiceList = require('./src/triggers/voice_list');
 const convertTextToSpeech = require('./src/creates/convert_text_to_speech');
 
 // Sends the API key as a Bearer token on every request.
@@ -24,6 +23,5 @@ module.exports = {
   authentication,
   beforeRequest: [addAuthHeader],
   afterResponse: [handleErrors],
-  triggers: { [voiceList.key]: voiceList },
   creates: { [convertTextToSpeech.key]: convertTextToSpeech },
 };
