@@ -1,6 +1,6 @@
 {
   "name": "zapier-readaloud",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zapier integration for ReadAloud: convert text to speech and get an audio file.",
   "license": "MIT",
   "homepage": "https://github.com/tsushanth/zapier-readaloud#readme",

@@ -21,7 +21,7 @@ Output: `file` (a Zapier-hosted file other steps can attach or upload), `file_na
 
 ## Authentication
 
-API key. The key is sent as `Authorization: Bearer <key>`. Connecting runs `GET /v1/voices` as the connection test.
+API key. The key is sent as `Authorization: Bearer <key>`. Connecting runs `GET /v1/user/subscription` as the connection test (it costs no characters), and the connection is labelled with the plan, for example "paid account".
 
 ## Errors
 

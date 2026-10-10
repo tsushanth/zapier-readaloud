@@ -14,10 +14,11 @@ module.exports = {
         'Create an API key in your account at [readaloudai.org](https://readaloudai.org), then paste it here.',
     },
   ],
-  // Cheap authenticated call; returns 401 for a bad key.
+  // Cheap authenticated call (costs no characters); returns 401 for a bad key and the account's plan tier.
   test: {
-    url: `${BASE_URL}/v1/voices`,
+    url: `${BASE_URL}/v1/user/subscription`,
     method: 'GET',
   },
-  connectionLabel: 'ReadAloud',
+  // Shows the plan of the connected account (for example "paid account"). Optional per Zapier, and never the key itself.
+  connectionLabel: '{{json.tier}} account',
 };

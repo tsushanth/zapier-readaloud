@@ -21,7 +21,7 @@ const key = live
 
   test('connection test passes', async () => {
     const res = await appTester(App.authentication.test, { authData });
-    expect(Array.isArray(res.voices)).toBe(true);
+    expect(['free', 'paid']).toContain(res.tier);
   });
 
   test('speech returns real audio bytes', async () => {

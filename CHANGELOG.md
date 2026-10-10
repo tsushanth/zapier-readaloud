@@ -1,7 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.1.1
 
+- Connection test is now `GET /v1/user/subscription` and the connection label shows the account's plan (publishing requirement 5.6: no hard-coded app name).
+- Listing description rewritten to the required form ("ReadAloud is a ...", no mention of Zapier or other apps).
 - Only `piper-default` is offered for now: removed the hidden `voice_list` trigger; the Voice field is a single fixed choice.
 
 ## 0.1.0

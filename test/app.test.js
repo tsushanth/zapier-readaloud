@@ -40,16 +40,20 @@ const run = (inputData, extra = {}) =>
 afterEach(() => nock.cleanAll());
 
 describe('authentication', () => {
-  test('test call sends Bearer key to GET /v1/voices', async () => {
+  test('test call sends Bearer key to GET /v1/user/subscription', async () => {
     nock(API, { reqheaders: { authorization: 'Bearer test-key-not-real' } })
-      .get('/v1/voices')
-      .reply(200, { voices: [] });
+      .get('/v1/user/subscription')
+      .reply(200, { tier: 'paid' });
     const res = await appTester(App.authentication.test, { authData });
-    expect(res.voices).toEqual([]);
+    expect(res.tier).toBe('paid');
+  });
+
+  test('connection label shows the plan, not the app name or the key', () => {
+    expect(App.authentication.connectionLabel).toBe('{{json.tier}} account');
   });
 
   test('401 becomes ExpiredAuthError', async () => {
-    nock(API).get('/v1/voices').reply(401, { error: { message: 'bad key' } });
+    nock(API).get('/v1/user/subscription').reply(401, { error: { message: 'bad key' } });
     await expect(
       appTester(App.authentication.test, { authData }),
     ).rejects.toThrow(/API key was rejected/);
